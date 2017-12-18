@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="85f41a4a-b534-4dc1-bc33-d41d92cd73de" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/courier_sample.qc" afterPath="$PROJECT_DIR$/3DMod/courier/courier_sample.qc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey.smd" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey.smd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey/donkey.smd" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey/donkey.smd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey/donkey_wings.smd" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey/donkey_wings.smd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey_wings.smd" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/OBJ/donkey_wings.smd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_idle.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_idle.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_idle_alt.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_idle_alt.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_run.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_run.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_spawn.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_spawn.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_turns.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_turns.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_die.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_die.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_idle.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_idle.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_run.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_run.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_run_alt.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/animation/donkey_wings_run_alt.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/donkey_rig.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/donkey_rig.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/donkey_wings_model.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/donkey_wings_model.ma" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/donkey_wings_rig.ma" afterPath="$PROJECT_DIR$/3DMod/courier/models/props_gameplay/maya/donkey_wings_rig.ma" />
+    </list>
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DOTA2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DOTA2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="first">
+      <created>1513612515547</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513612515547</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first">
+      <created>1513612565910</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1513612565910</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="94000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32043532" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
