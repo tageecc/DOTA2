@@ -41,7 +41,7 @@ THREE.GLTFLoader = ( function () {
 					if ( onError !== undefined ) {
 
 						// For SyntaxError or TypeError, return a generic failure message.
-						onError( e.constructor === Error ? e : new Error( 'THREE.GLTFLoader: Unable to parse model.' ) );
+						onError( e.constructor === Error ? e : new Error( 'THREE.GLTFLoader: Unable to parse models.' ) );
 
 					}
 
@@ -670,7 +670,7 @@ THREE.GLTFLoader = ( function () {
 			 * normally be defined by MeshStandardMaterial.
 			 *
 			 * This method allows GLTFSpecularGlossinessMaterials to be cloned in the process of
-			 * loading a glTF model, but cloning later (e.g. by the user) would require these changes
+			 * loading a glTF models, but cloning later (e.g. by the user) would require these changes
 			 * AND also updating `.onBeforeRender` on the parent mesh.
 			 *
 			 * @param  {THREE.ShaderMaterial} source
@@ -2248,7 +2248,7 @@ THREE.GLTFLoader = ( function () {
 		// avoid having more than one THREE.Mesh with the same name, count
 		// references and rename instances below.
 		//
-		// Example: CesiumMilkTruck sample model reuses "Wheel" meshes.
+		// Example: CesiumMilkTruck sample models reuses "Wheel" meshes.
 		for ( var nodeIndex in nodes ) {
 
 			var nodeDef = nodes[ nodeIndex ];

@@ -7,6 +7,7 @@
     <script src="three.js/build/three.min.js"></script>
     <script src="three.js/examples/js/objects/Water.js"></script>
     <script src="three.js/examples/js/controls/OrbitControls.js"></script>
+    <script src="three.js/examples/js/loaders/GLTFLoader.js"></script>
     <style>
         body {
             margin: 0;
@@ -18,7 +19,7 @@
 <div id="3d"></div>
 
 <script type="text/javascript">
-    let render, scene, camera,light,water,cubeMap;
+    let render, scene, camera, light, water, cubeMap;
     let parameters = {
         oceanSide: 2000,
         size: 1.0,
@@ -26,34 +27,39 @@
         alpha: 1.0
     };
     init();
+
     function initRender() {
         render = new THREE.WebGLRenderer();
         render.setSize(window.innerWidth, window.innerHeight);
-        render.setPixelRatio( window.devicePixelRatio );
+        render.setPixelRatio(window.devicePixelRatio);
         render.shadowMapEnabled = true;
         document.getElementById('3d').append(render.domElement);
     }
+
     function initScene() {
         scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2( '#ccc', 0.0005 );
+        scene.fog = new THREE.FogExp2('#ccc', 0.0005);
     }
+
     function initCamera() {
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-        camera.position.set( 100, 200, 500 );
+        camera.position.set(100, 200, 500);
     }
+
     function initLight() {
-        light = new THREE.DirectionalLight( 0xffffbb, 1 );
-        light.position.set( - 30, 30, - 30 );
+        light = new THREE.DirectionalLight(0xffffbb, 1);
+        light.position.set(-30, 30, -30);
         light.castShadow = true;
         light.shadow.camera.top = 45;
         light.shadow.camera.right = 40;
         light.shadow.camera.left = light.shadow.camera.bottom = -40;
         light.shadow.camera.near = 1;
         light.shadow.camera.far = 200;
-        scene.add( light, new THREE.AmbientLight( 0x888888 ) );
+        scene.add(light, new THREE.AmbientLight(0x888888));
         // 添加环境光
         scene.add(new THREE.AmbientLight('#fff'));
     }
+
     function initControl() {
         let controls = new THREE.OrbitControls(camera, render.domElement);
         controls.maxPolarAngle = Math.PI * 0.495;
@@ -63,63 +69,62 @@
         controls.maxDistance = 600.0;
         camera.lookAt(controls.target);
     }
+
     function loadModule() {
-        let loader = new THREE.OBJLoader();
-        loader.load('3DMod/courier/models/props_gameplay/OBJ/donkey_wings.obj', function (geometry) {
-            let material = new THREE.MeshLambertMaterial({color: 0x5C3A21});
-            geometry.position.set(0, 0, 0);
-            geometry.traverse(function (child) {
-                if (child instanceof THREE.Mesh) {
-                    child.material.map = THREE.ImageUtils.loadTexture('3DMod/courier/materialsrc/models/props_gameplay/donkey01.jpg');
-                    child.material.needsUpdate = true;
-                }
+        let loader = new THREE.GLTFLoader();
+        loader.load('./models/crystal_maiden/crystal_maiden.gltf', function (data) {
+
+            gltf = data;
+
+            let object = gltf.scene;
+
+            object.traverse(function (node) {
+
+                if (node.isMesh) node.castShadow = true;
+
             });
-            geometry.children.forEach(function (child) {
-                if (child.children.length === 1) {
-                    if (child.children[0] instanceof THREE.Mesh) {
-                        child.children[0].material = material;
-                    }
-                }
-            });
-            scene.add(geometry);
+            scene.add(object);
+
         });
     }
+
     function loadSkyBox() {
-        cubeMap = new THREE.CubeTexture( [] );
+        cubeMap = new THREE.CubeTexture([]);
         cubeMap.format = THREE.RGBFormat;
         let loader = new THREE.ImageLoader();
-        loader.load( 'libs/three.js/examples/textures/skyboxsun25degtest.png', function ( image ) {
-            let getSide = function ( x, y ) {
+        loader.load('three.js/examples/textures/skyboxsun25degtest.png', function (image) {
+            let getSide = function (x, y) {
                 let size = 1024;
-                let canvas = document.createElement( 'canvas' );
+                let canvas = document.createElement('canvas');
                 canvas.width = size;
                 canvas.height = size;
-                let context = canvas.getContext( '2d' );
-                context.drawImage( image, - x * size, - y * size );
+                let context = canvas.getContext('2d');
+                context.drawImage(image, -x * size, -y * size);
                 return canvas;
             };
-            cubeMap.images[ 0 ] = getSide( 2, 1 ); // px
-            cubeMap.images[ 1 ] = getSide( 0, 1 ); // nx
-            cubeMap.images[ 2 ] = getSide( 1, 0 ); // py
-            cubeMap.images[ 3 ] = getSide( 1, 2 ); // ny
-            cubeMap.images[ 4 ] = getSide( 1, 1 ); // pz
-            cubeMap.images[ 5 ] = getSide( 3, 1 ); // nz
+            cubeMap.images[0] = getSide(2, 1); // px
+            cubeMap.images[1] = getSide(0, 1); // nx
+            cubeMap.images[2] = getSide(1, 0); // py
+            cubeMap.images[3] = getSide(1, 2); // ny
+            cubeMap.images[4] = getSide(1, 1); // pz
+            cubeMap.images[5] = getSide(3, 1); // nz
             cubeMap.needsUpdate = true;
-        } );
-        let cubeShader = THREE.ShaderLib[ 'cube' ];
-        cubeShader.uniforms[ 'tCube' ].value = cubeMap;
-        let skyBoxMaterial = new THREE.ShaderMaterial( {
+        });
+        let cubeShader = THREE.ShaderLib['cube'];
+        cubeShader.uniforms['tCube'].value = cubeMap;
+        let skyBoxMaterial = new THREE.ShaderMaterial({
             fragmentShader: cubeShader.fragmentShader,
             vertexShader: cubeShader.vertexShader,
             uniforms: cubeShader.uniforms,
             side: THREE.BackSide
-        } );
+        });
         let skyBox = new THREE.Mesh(
-            new THREE.BoxGeometry( parameters.oceanSide * 5 + 100, parameters.oceanSide * 5 + 100, parameters.oceanSide * 5 + 100 ),
+            new THREE.BoxGeometry(parameters.oceanSide * 5 + 100, parameters.oceanSide * 5 + 100, parameters.oceanSide * 5 + 100),
             skyBoxMaterial
         );
-        scene.add( skyBox );
+        scene.add(skyBox);
     }
+
     function loadWater() {
         water = new THREE.Water(
             parameters.oceanSide * 5,
@@ -127,10 +132,10 @@
             {
                 textureWidth: 512,
                 textureHeight: 512,
-                waterNormals: new THREE.TextureLoader().load( 'libs/three.js/examples/textures/waternormals.jpg', function ( texture ) {
+                waterNormals: new THREE.TextureLoader().load('three.js/examples/textures/waternormals.jpg', function (texture) {
                     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
                 }),
-                alpha: 	parameters.alpha,
+                alpha: parameters.alpha,
                 sunDirection: light.position.clone().normalize(),
                 sunColor: 0xffffff,
                 waterColor: 0x001e0f,
@@ -138,10 +143,11 @@
                 fog: scene.fog !== undefined
             }
         );
-        water.rotation.x = - Math.PI / 2;
+        water.rotation.x = -Math.PI / 2;
         water.receiveShadow = true;
-        scene.add( water );
+        scene.add(water);
     }
+
     function init() {
         initRender();
         initScene();
@@ -153,6 +159,7 @@
         loadModule();
         renderAni()
     }
+
     function renderAni() {
         requestAnimationFrame(renderAni);
         water.material.uniforms.time.value += 1.0 / 60.0;

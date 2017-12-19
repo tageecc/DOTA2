@@ -8,10 +8,10 @@
 THREE.UTF8Loader = function () {};
 
 /**
- * Load UTF8 encoded model
- * @param jsonUrl - URL from which to load json containing information about model
- * @param callback - Callback(THREE.Object3D) on successful loading of model
- * @param options - options on how to load model (see THREE.MTLLoader.MaterialCreator for basic options)
+ * Load UTF8 encoded models
+ * @param jsonUrl - URL from which to load json containing information about models
+ * @param callback - Callback(THREE.Object3D) on successful loading of models
+ * @param options - options on how to load models (see THREE.MTLLoader.MaterialCreator for basic options)
  *                  Additional options include
  *                   geometryBase: Base url from which to load referenced geometries
  *                   materialBase: Base url from which to load referenced textures
@@ -620,7 +620,7 @@ THREE.UTF8Loader.prototype.createMeshCallback = function ( materialBaseUrl, load
 
 		// Got ourselves a new mesh
 
-		// name identifies this part of the model (url)
+		// name identifies this part of the models (url)
 		// idx is the mesh index of this mesh of the part
 		// attribArray defines the vertices
 		// indexArray defines the faces
@@ -633,7 +633,7 @@ THREE.UTF8Loader.prototype.createMeshCallback = function ( materialBaseUrl, load
 		var mesh = new THREE.Mesh( geometry, material );
 		modelParts[ name ].add( mesh );
 
-		//model.add(new THREE.Mesh(geometry, material));
+		//models.add(new THREE.Mesh(geometry, material));
 
 		decodedMeshesPerUrl[ name ] ++;
 

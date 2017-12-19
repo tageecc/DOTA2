@@ -113,7 +113,7 @@
 
 	} );
 
-	// Parses FBXTree.Connections which holds parent-child connections between objects (e.g. material -> texture, model->geometry )
+	// Parses FBXTree.Connections which holds parent-child connections between objects (e.g. material -> texture, models->geometry )
 	// and details the connection type
 	function parseConnections( FBXTree ) {
 
@@ -378,7 +378,7 @@
 		var name = materialNode.attrName;
 		var type = materialNode.properties.ShadingModel;
 
-		//Case where FBX wraps shading model in property object.
+		//Case where FBX wraps shading models in property object.
 		if ( typeof type === 'object' ) {
 
 			type = type.value;
@@ -1057,7 +1057,7 @@
 
 			geo.addAttribute( 'skinWeight', new THREE.Float32BufferAttribute( vertexWeightsBuffer, 4 ) );
 
-			// used later to bind the skeleton to the model
+			// used later to bind the skeleton to the models
 			geo.FBX_Deformer = deformer;
 
 		}
@@ -1349,7 +1349,7 @@
 
 		if ( THREE.NURBSCurve === undefined ) {
 
-			console.error( 'THREE.FBXLoader: The loader relies on THREE.NURBSCurve for any nurbs present in the model. Nurbs will show up as empty geometry.' );
+			console.error( 'THREE.FBXLoader: The loader relies on THREE.NURBSCurve for any nurbs present in the models. Nurbs will show up as empty geometry.' );
 			return new THREE.BufferGeometry();
 
 		}
@@ -1942,7 +1942,7 @@
 
 			}
 
-			// Now that skeleton is in bind pose, bind to model.
+			// Now that skeleton is in bind pose, bind to models.
 			deformer.skeleton = new THREE.Skeleton( deformer.bones );
 
 			var conns = connections.get( deformer.FBX_ID );

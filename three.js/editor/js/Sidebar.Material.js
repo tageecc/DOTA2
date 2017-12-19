@@ -958,7 +958,7 @@ Sidebar.Material = function ( editor ) {
 
 		if ( textureWarning ) {
 
-			console.warn( "Can't set texture, model doesn't have texture coordinates" );
+			console.warn( "Can't set texture, models doesn't have texture coordinates" );
 
 		}
 

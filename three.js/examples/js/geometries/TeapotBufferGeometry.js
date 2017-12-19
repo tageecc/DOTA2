@@ -420,9 +420,9 @@ THREE.TeapotBufferGeometry = function ( size, segments, bottom, lid, body, fitLi
 
 	// Jim Blinn scaled the teapot down in size by about 1.3 for
 	// some rendering tests. He liked the new proportions that he kept
-	// the data in this form. The model was distributed with these new
+	// the data in this form. The models was distributed with these new
 	// proportions and became the norm. Trivia: comparing images of the
-	// real teapot and the computer model, the ratio for the bowl of the
+	// real teapot and the computer models, the ratio for the bowl of the
 	// real teapot is more like 1.25, but since 1.3 is the traditional
 	// value given, we use it here.
 	var blinnScale = 1.3;
@@ -563,7 +563,7 @@ THREE.TeapotBufferGeometry = function ( size, segments, bottom, lid, body, fitLi
 
 							// increase XY size by 7.7%, found empirically. I don't
 							// increase Z so that the teapot will continue to fit in the
-							// space -1 to 1 for Y (Y is up for the final model).
+							// space -1 to 1 for Y (Y is up for the final models).
 							g[ c * 4 + r ] *= 1.077;
 
 						}

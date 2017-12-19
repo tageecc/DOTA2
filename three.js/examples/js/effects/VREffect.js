@@ -418,7 +418,7 @@ THREE.VREffect = function ( renderer, onError ) {
 	var poseOrientation = new THREE.Quaternion();
 	var posePosition = new THREE.Vector3();
 
-	// Compute model matrices of the eyes with respect to the head.
+	// Compute models matrices of the eyes with respect to the head.
 	function getEyeMatrices( frameData ) {
 
 		// Compute the matrix for the position of the head based on the pose
@@ -443,7 +443,7 @@ THREE.VREffect = function ( renderer, onError ) {
 		// The view matrix transforms vertices from sitting space to eye space. As such, the view matrix can be thought of as a product of two matrices:
 		// headToEyeMatrix * sittingToHeadMatrix
 
-		// The headMatrix that we've calculated above is the model matrix of the head in sitting space, which is the inverse of sittingToHeadMatrix.
+		// The headMatrix that we've calculated above is the models matrix of the head in sitting space, which is the inverse of sittingToHeadMatrix.
 		// So when we multiply the view matrix with headMatrix, we're left with headToEyeMatrix:
 		// viewMatrix * headMatrix = headToEyeMatrix * sittingToHeadMatrix * headMatrix = headToEyeMatrix
 
@@ -452,7 +452,7 @@ THREE.VREffect = function ( renderer, onError ) {
 		eyeMatrixR.fromArray( frameData.rightViewMatrix );
 		eyeMatrixR.multiply( headMatrix );
 
-		// The eye's model matrix in head space is the inverse of headToEyeMatrix we calculated above.
+		// The eye's models matrix in head space is the inverse of headToEyeMatrix we calculated above.
 
 		eyeMatrixL.getInverse( eyeMatrixL );
 		eyeMatrixR.getInverse( eyeMatrixR );

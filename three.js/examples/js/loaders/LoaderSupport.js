@@ -806,7 +806,7 @@ THREE.LoaderSupport.LoaderBase = (function () {
 	};
 
 	/**
-	 * Set the name of the model.
+	 * Set the name of the models.
 	 * @memberOf THREE.LoaderSupport.LoaderBase
 	 *
 	 * @param {string} modelName

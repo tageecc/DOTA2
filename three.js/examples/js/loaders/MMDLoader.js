@@ -194,7 +194,7 @@ THREE.MMDLoader.prototype.loadVpd = function ( url, callback, onProgress, onErro
 
 THREE.MMDLoader.prototype.parseModel = function ( buffer, modelExtension ) {
 
-	// Should I judge from model data header?
+	// Should I judge from models data header?
 	switch ( modelExtension.toLowerCase() ) {
 
 		case 'pmd':
@@ -2371,7 +2371,7 @@ THREE.MMDHelper.prototype = {
 	},
 
 	/*
-	 * detect the longest duration among model, camera, and audio animations and then
+	 * detect the longest duration among models, camera, and audio animations and then
 	 * set it to them to sync.
 	 * TODO: touching private properties ( ._actions and ._clip ) so consider better way
 	 *       to access them for safe and modularity.

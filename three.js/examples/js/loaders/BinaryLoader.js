@@ -26,8 +26,8 @@ THREE.BinaryLoader.prototype = {
 	//  - parameters
 	//		- url (required)
 	//		- callback (required)
-	//		- texturePath (optional: if not specified, textures will be assumed to be in the same folder as JS model file)
-	//		- binaryPath (optional: if not specified, binary file will be assumed to be in the same folder as JS model file)
+	//		- texturePath (optional: if not specified, textures will be assumed to be in the same folder as JS models file)
+	//		- binaryPath (optional: if not specified, binary file will be assumed to be in the same folder as JS models file)
 	load: function ( url, onLoad, onProgress, onError ) {
 
 		// todo: unify load API to for easier SceneLoader use

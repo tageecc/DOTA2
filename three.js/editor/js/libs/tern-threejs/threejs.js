@@ -391,7 +391,7 @@
         },
         "vertices": {
           "!type": "[]",
-          "!doc": "Array of [page:Vector3 vertices].<br>\n\t\tThe array of vertices holds every position of points in the model.<br>\n\t\tTo signal an update in this array, [page:Geometry Geometry.verticesNeedUpdate] needs to be set to true."
+          "!doc": "Array of [page:Vector3 vertices].<br>\n\t\tThe array of vertices holds every position of points in the models.<br>\n\t\tTo signal an update in this array, [page:Geometry Geometry.verticesNeedUpdate] needs to be set to true."
         },
         "colors": {
           "!type": "[]",
@@ -399,7 +399,7 @@
         },
         "faces": {
           "!type": "[]",
-          "!doc": "Array of [page:Face3 triangles].<br>\n\t\tThe array of faces describe how each vertex in the model is connected with each other.<br>\n\t\tTo signal an update in this array, [page:Geometry Geometry.elementsNeedUpdate] needs to be set to true."
+          "!doc": "Array of [page:Face3 triangles].<br>\n\t\tThe array of faces describe how each vertex in the models is connected with each other.<br>\n\t\tTo signal an update in this array, [page:Geometry Geometry.elementsNeedUpdate] needs to be set to true."
         },
         "faceVertexUvs": {
           "!type": "[]",
@@ -506,7 +506,7 @@
           "!doc": "Compute distances between vertices for Line geometries."
         }
       },
-      "!doc": "Base class for geometries.<br>\n\t\tA geometry holds all data necessary to describe a 3D model.",
+      "!doc": "Base class for geometries.<br>\n\t\tA geometry holds all data necessary to describe a 3D models.",
       "!type": "fn()"
     },
     "Object3D": {
@@ -1792,7 +1792,7 @@
         },
         "load": {
           "!type": "fn(url: string, callback: function, texturePath: string)",
-          "!doc": "[page:String url] — required<br>\n\t\t[page:Function callback] — required. Will be called when load completes. The arguments will be the loaded [page:Object3D] and the loaded [page:Array materials].<br>\n\t\t[page:String texturePath] — optional. If not specified, textures will be assumed to be in the same folder as the Javascript model file."
+          "!doc": "[page:String url] — required<br>\n\t\t[page:Function callback] — required. Will be called when load completes. The arguments will be the loaded [page:Object3D] and the loaded [page:Array materials].<br>\n\t\t[page:String texturePath] — optional. If not specified, textures will be assumed to be in the same folder as the Javascript models file."
         },
         "loadAjaxJSON": {
           "!type": "fn(context: +THREE.JSONLoader, url: string, callback: function, texturePath: string, callbackProgress: function)",
@@ -2346,11 +2346,11 @@
         },
         "wrapAround": {
           "!type": "boolean",
-          "!doc": "Define whether the diffuse lighting wraps around the model or not. This option adds a little more (tintable) light\n\t\t\tonto the side of the object in relation to a light."
+          "!doc": "Define whether the diffuse lighting wraps around the models or not. This option adds a little more (tintable) light\n\t\t\tonto the side of the object in relation to a light."
         },
         "wrapRGB": {
           "!type": "+THREE.Vector3",
-          "!doc": "Decide how much of the wrap around values get used if the wrapAround option is set. The x, y, z values correspond\n\t\t\tto the r, g, b values respectively. The typical range is of each is from 0 to 1. For example setting all of the\n\t\t\tvector values to 0.5 will add a moderate amount of light to the side of the model. Changing *b* to 1 will\n\t\t\ttint the light on the side to be more blue. Defaults to *(1,1,1)*."
+          "!doc": "Decide how much of the wrap around values get used if the wrapAround option is set. The x, y, z values correspond\n\t\t\tto the r, g, b values respectively. The typical range is of each is from 0 to 1. For example setting all of the\n\t\t\tvector values to 0.5 will add a moderate amount of light to the side of the models. Changing *b* to 1 will\n\t\t\ttint the light on the side to be more blue. Defaults to *(1,1,1)*."
         },
         "map": {
           "!type": "+THREE.Texture",
@@ -2474,11 +2474,11 @@
         },
         "wrapAround": {
           "!type": "boolean",
-          "!doc": "Define whether the diffuse lighting wraps around the model or not. This option adds a little more (tintable) light\n\t\t\tonto the side of the object in relation to a light."
+          "!doc": "Define whether the diffuse lighting wraps around the models or not. This option adds a little more (tintable) light\n\t\t\tonto the side of the object in relation to a light."
         },
         "wrapRGB": {
           "!type": "+THREE.Vector3",
-          "!doc": "Decide how much of the wrap around values get used if the wrapAround option is set. The x, y, z values correspond\n\t\t\tto the r, g, b values respectively. The typical range is of each is from 0 to 1. For example setting all of the\n\t\t\tvector values to 0.5 will add a moderate amount of light to the side of the model. Changing *b* to 1 will\n\t\t\ttint the light on the side to be more blue. Defaults to (1,1,1)."
+          "!doc": "Decide how much of the wrap around values get used if the wrapAround option is set. The x, y, z values correspond\n\t\t\tto the r, g, b values respectively. The typical range is of each is from 0 to 1. For example setting all of the\n\t\t\tvector values to 0.5 will add a moderate amount of light to the side of the models. Changing *b* to 1 will\n\t\t\ttint the light on the side to be more blue. Defaults to (1,1,1)."
         },
         "map": {
           "!type": "+THREE.Texture",
