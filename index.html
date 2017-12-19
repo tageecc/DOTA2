@@ -72,7 +72,7 @@
 
     function loadModule() {
         let loader = new THREE.GLTFLoader();
-        loader.load('./models/crystal_maiden/crystal_maiden.gltf', function (data) {
+        loader.load('./models/crystal_maiden/crystal_maiden.gltf', data => {
 
             gltf = data;
 
