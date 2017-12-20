@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<button onclick="playA(0)">动作1</button>
+<button onclick="playA(1)">动作2</button>
+<button onclick="playA(2)">动作3</button>
+
+<script src="three.js/build/three.min.js"></script>
+<script src="three.js/examples/js/objects/Water.js"></script>
+<script src="three.js/examples/js/controls/OrbitControls.js"></script>
+<script src="three.js/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+
+    var scene, camera, renderer;
+
+    var WIDTH = document.documentElement.clientWidth;
+    var HEIGHT = document.documentElement.clientHeight;
+
+    var SPEED = 0.01;
+
+    function init() {
+        scene = new THREE.Scene();
+
+        initMesh();
+        initCamera();
+        initLights();
+        initRenderer();
+
+
+        document.body.appendChild(renderer.domElement);
+    }
+
+    function initCamera() {
+        camera = new THREE.PerspectiveCamera(40, WIDTH / HEIGHT, 1, 1000);
+        camera.position.set(0, 0, 40);
+        camera.lookAt(scene.position);
+    }
+
+
+    function initRenderer() {
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setClearColor(0xffffff, 0);
+        renderer.setSize(WIDTH, HEIGHT);
+    }
+
+    function initLights() {
+        var light = new THREE.AmbientLight(0xffffff, 1);
+        scene.add(light);
+
+
+        var slight = new THREE.HemisphereLight(0x000000, 0xffffff, 0.5);
+        scene.add(slight);
+
+    }
+
+    var mesh = null;
+    var mixer;
+    function initMesh(index) {
+        var loader = new THREE.GLTFLoader();
+        loader.load('./models/crystal_maiden/crystal_maiden.gltf', function (gltf) {
+
+            mesh = gltf.scene;
+            mesh.scale.set(5,5,5);
+            var animations = gltf.animations;
+
+            console.log(gltf);
+
+            // if (animations && animations.length) {
+
+            mixer = new THREE.AnimationMixer(mesh);
+
+            a = []
+
+            for (var i = 0; i < animations.length; i++) {
+
+                // var animation = animations[2];
+
+
+                a[i] = mixer.clipAction(animations[i]);
+
+
+                // console.log(mixer.clipAction(animation))
+
+                // mixer.clipAction(animation).play();
+            }
+            // }
+            scene.add(gltf.scene);
+        });
+    }
+
+    function playA(index) {
+
+        a.forEach(i => i.stop())
+        a[index].play();
+
+    }
+
+
+    var canRotate = false
+
+    document.addEventListener('mousedown', () => {
+        canRotate = true;
+    })
+
+    document.addEventListener('mousemove', (e) => {
+        if (canRotate) {
+
+            mesh.rotation.x += e.movementY / 50;
+            mesh.rotation.y += e.movementX / 50;
+        }
+    })
+
+    document.addEventListener('mouseup', () => {
+        canRotate = false;
+    })
+
+    var x, y;
+    document.addEventListener('touchstart', (e) => {
+        canRotate = true;
+        x = e.touches[0].pageX
+        y = e.touches[0].pageY
+    })
+
+    document.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+
+        if (canRotate) {
+
+            var dx = e.touches[0].pageX
+            var dy = e.touches[0].pageY
+
+            mesh.rotation.x += (dy - y) / 500;
+            mesh.rotation.y += (dx - x) / 500;
+        }
+    })
+
+    document.addEventListener('touchend', () => {
+        canRotate = false;
+    })
+
+    var clock = new THREE.Clock();
+
+
+    function render() {
+
+        var delta = clock.getDelta();
+
+        if (mixer) {
+            mixer.update(delta);
+        }
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+    }
+
+    init();
+    render();
+</script>
+</body>
+
+</html>
